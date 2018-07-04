@@ -17,11 +17,11 @@ function renderColumn(data , container) {
 
 	//attributes assigment
 	cardContainer.className = "collection";
-	columnDivCol.className = "col s4 m4";
+	columnDivCol.className = "col-s4-m4";
 	columnDivH.className = "card horizontal";
 	columnDivS.className = "card-stacked";
 	columnDivC.className = "card-content";
-	columnDivA.className = "card-title activator grey-text text-darken-4";
+	columnDivA.className = "";
 	columnDivAc.className = "card-action";
 	columnLink.className = "teal-text";
 	columnDivI.className = "material-icons right";
@@ -37,10 +37,11 @@ function renderColumn(data , container) {
 	columnDivC.appendChild(columnDivA);
 	columnDivA.appendChild(columnDivI);
 	columnDivI.appendChild(document.createTextNode("more_vert"));
-	columnDivA.appendChild(document.createTextNode("Estas son tus tarjetas"));
+	columnDivC.appendChild(columnH5);
+	columnH5.appendChild(document.createTextNode("Estas son tus tarjetas"));
 	columnDivC.appendChild(columnBr);
 	columnDivC.appendChild(cardDivCo);
-	for (var i = 0; i < 10; i++) {
+	for (var i = 0; i < 2; i++) {
 		renderCard({}, cardContainer);
 	}
 	columnDivC.appendChild(cardContainer);

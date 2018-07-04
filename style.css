@@ -63,3 +63,8 @@ footer.page-footer {
           display: flex;
           flex-flow: row wrap;
         }
+
+        .col-s4-m4 {
+          display: grid;
+          margin-right: 15px;
+        }
