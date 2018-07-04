@@ -6,6 +6,8 @@ function renderColumn(data , container) {
 	let columnDivH = document.createElement("div");
 	let columnDivS = document.createElement("div");
 	let columnDivC = document.createElement("div");
+	let columnDivA = document.createElement("a");
+	let columnDivI = document.createElement("i");
 	let columnH5   = document.createElement("h5");
 	let columnBr   = document.createElement("br");
 	let cardDivCo = document.createElement("div");
@@ -19,8 +21,11 @@ function renderColumn(data , container) {
 	columnDivH.className = "card horizontal";
 	columnDivS.className = "card-stacked";
 	columnDivC.className = "card-content";
+	columnDivA.className = "card-title activator grey-text text-darken-4";
 	columnDivAc.className = "card-action";
 	columnLink.className = "teal-text";
+	columnDivI.className = "material-icons right";
+	columnDivA.href = "#";
 
 
 	//appending
@@ -29,8 +34,10 @@ function renderColumn(data , container) {
 	columnDivH.appendChild(columnDivS);
 	columnDivS.appendChild(columnDivC);
 	columnDivS.appendChild(columnDivAc);
-	columnDivC.appendChild(columnH5);
-	columnH5.appendChild(document.createTextNode("Estas son tus tarjetas"));
+	columnDivC.appendChild(columnDivA);
+	columnDivA.appendChild(columnDivI);
+	columnDivI.appendChild(document.createTextNode("more_vert"));
+	columnDivA.appendChild(document.createTextNode("Estas son tus tarjetas"));
 	columnDivC.appendChild(columnBr);
 	columnDivC.appendChild(cardDivCo);
 	for (var i = 0; i < 10; i++) {
