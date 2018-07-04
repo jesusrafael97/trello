@@ -11,8 +11,10 @@ function renderColumn(data , container) {
 	let cardDivCo = document.createElement("div");
 	let columnDivAc = document.createElement("div");
 	let columnLink = document.createElement("a");
+	let cardContainer = document.createElement("div");
 
 	//attributes assigment
+	cardContainer.className = "collection";
 	columnDivCol.className = "col s4 m4";
 	columnDivH.className = "card horizontal";
 	columnDivS.className = "card-stacked";
@@ -31,15 +33,23 @@ function renderColumn(data , container) {
 	columnH5.appendChild(document.createTextNode("Estas son tus tarjetas"));
 	columnDivC.appendChild(columnBr);
 	columnDivC.appendChild(cardDivCo);
-	container.appendChild(columnDivCol);
+	for (var i = 0; i < 10; i++) {
+		renderCard({}, cardContainer);
+	}
+	columnDivC.appendChild(cardContainer);
 	columnDivAc.appendChild(columnLink);
 	columnLink.appendChild(document.createTextNode("Agregar tarjeta"));
+	container.appendChild(columnDivCol);
+
 
 }
 
 function renderCard(data , container){
 
-	let cardA1 = document.createElement("a");
-	
+	let card = document.createElement("a");
+	card.href = "#";
+	card.className = "collection-item";
+	card.appendChild(document.createTextNode("Prueba"));
+	container.appendChild(card);
 }
 
